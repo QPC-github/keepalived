@@ -1,0 +1,27 @@
+Source: keepalived
+Section: admin
+Priority: extra
+Maintainer: Shopify <ops@shopify.com>
+XSBC-Original-Maintainer: Alexander Wirt <formorer@debian.org>
+Build-Depends: debhelper (>= 5), libssl-dev, libpopt-dev, cdbs, autoconf, linux-libc-dev, libnl-3-dev, libnl-genl-3-dev
+Standards-Version: 3.9.2
+Vcs-Browser: https://github.com/Shopify/keepalived
+Vcs-Git: git://github.com/Shopify/keepalived.git
+
+Package: keepalived
+Section: admin
+Architecture: any
+Depends: ${shlibs:Depends}, ipvsadm, iproute, ${misc:Depends}
+Description: Failover and monitoring daemon for LVS clusters
+ keepalived is used for monitoring real servers within a Linux
+ Virtual Server (LVS) cluster.  keepalived can be configured to
+ remove real servers from the cluster pool if it stops responding,
+ as well as send a notification email to make the admin aware of
+ the service failure.
+ .
+ In addition, keepalived implements an independent Virtual Router
+ Redundancy Protocol (VRRPv2; see rfc2338 for additional info)
+ framework for director failover.
+ .
+ You need a kernel >= 2.4.28 or >= 2.6.11 for keepalived.
+ See README.Debian for more information.
