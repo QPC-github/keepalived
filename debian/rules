@@ -8,7 +8,7 @@ DEB_UPDATE_RCD_PARAMS := start 20 2 3 4 5 . stop 20 1 .
 
 DEB_AUTO_UPDATE_AUTOCONF = 2.50 
 DEB_CONFIGURE_SCRIPT_ENV := STRIP=/bin/true $(DEB_CONFIGURE_SCRIPT_ENV)
-DEB_CONFIGURE_EXTRA_FLAGS := --with-kernel-dir=debian/
+DEB_CONFIGURE_EXTRA_FLAGS := --with-kernel-dir=debian/ --enable-snmp
 
 binary-install/keepalived::
 	rm -rf $(DEB_DESTDIR)/etc/keepalived/samples
