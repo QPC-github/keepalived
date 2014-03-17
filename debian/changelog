@@ -1,3 +1,9 @@
+keepalived (1:1.2.12-0ubuntu1) precise; urgency=low
+
+  * New upstream release
+
+ -- Kenneth Vestergaard <kenneth.vestergaard@shopify.com>  Mon, Mar 17 13:16:00 +0100
+
 keepalived (1:1.2.10-0ubuntu1) precise; urgency=low
 
   * New upstream release
