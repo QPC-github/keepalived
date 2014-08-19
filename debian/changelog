@@ -1,3 +1,9 @@
+keepalived (1:1.2.13-1) precise; urgency=low
+
+  * New upstream release.
+
+ -- Kenneth Vestergaard <kenneth.vestergaard@shopify.com>  Mon, 19 Aug 2014 01:11:00 -0400
+
 keepalived (1:1.2.12-1) precise; urgency=low
 
   * Enable SNMP by default.
