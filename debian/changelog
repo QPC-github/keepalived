@@ -1,3 +1,9 @@
+keepalived (1:1.2.13-2) precise; urgency=low
+
+  * Start keepalived with "--snmp" by default.
+
+ -- Kenneth Vestergaard <kenneth.vestergaard@shopify.com>  Fri, 21 Nov 2014 14:52:00 +0100
+
 keepalived (1:1.2.13-1) precise; urgency=low
 
   * New upstream release.

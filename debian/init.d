@@ -19,6 +19,9 @@ NAME=keepalived
 DESC=keepalived
 CONFIG=/etc/keepalived/keepalived.conf
 TMPFILES="/tmp/.vrrp /tmp/.healthcheckers"
+OPTIONS="--snmp"
+
+test -f /etc/default/keepalived && . /etc/default/keepalived
 
 #includes lsb functions 
 . /lib/lsb/init-functions
@@ -34,7 +37,7 @@ case "$1" in
        		test -e $file && test ! -L $file && rm $file
 	done
 	if start-stop-daemon --start --quiet --pidfile /var/run/$NAME.pid \
-               --exec $DAEMON; then
+               --exec $DAEMON -- $OPTIONS; then
 		log_end_msg 0
 	else
 		log_end_msg 1
@@ -65,7 +68,7 @@ case "$1" in
 		/var/run/$NAME.pid --exec $DAEMON || true 
        sleep 1
        if start-stop-daemon --start --quiet --pidfile \
-               /var/run/$NAME.pid --exec $DAEMON; then
+               /var/run/$NAME.pid --exec $DAEMON -- $OPTIONS; then
 	       log_end_msg 0
 	else
 		log_end_msg 1
